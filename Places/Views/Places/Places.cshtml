@@ -1,0 +1,11 @@
+<h1>Places List</h1>
+<ul>
+  @foreach(var place in Model)
+  {
+    <li><a href="/Places/@place.GetId()">@place.GetCity()</a></li>
+  }
+</ul>
+<a href="/Places/new">Add another place</a>
+<form action="/Places/delete" method="post">
+  <button type="submit" name="button">Clear All Place</button>
+</form>
